@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chooks ToGo - Roasted Chicken</title>
+    <link rel="icon" class="rounded-circle" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Chooks ToGo Logo" class="logo-img">
+            <h1>Chooks To Go</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#specialties">Specialties</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Feedback</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero">
+    <div class="hero-container">
+        <h2>Welcome to Chooks To Go!</h2>
+        <p>We’re thrilled to have you here! At Chooks ToGo, we bring you the best in roasted chicken—perfectly seasoned and cooked to tender, juicy perfection. Whether you’re in the mood for sweet or craving a spicy kick, our signature flavors are made to satisfy. Ready to enjoy mouthwatering chicken that’s fresh, convenient, and delicious? Explore our menu, order for delivery, or pick up on the go. Whichever way you choose, every meal with Chooks ToGo is packed with quality and flavor you can count on.</p>
+        <h3>Chooks To Go – Where Flavor Comes First!</h3>
+
+    </div>
+    <video class="hero-video" width="400" height="200" controls>
+        <source src="vid/graphics-and-visual-computing-midterm-videofor-educational-purposes-only-1080-publer.io.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<!-- Specialties Section -->
+<section id="specialties" class="container">
+    <h2 style="color: black;">Specialties</h2>
+    <h3 style="color: black;">Why Choose Chooks ToGo?</h3>
+    <div class="features">
+        <div class="feature-item">
+            <img src="img/sweet-roasted.png" alt="Sweet Flavor" class="feature-img">
+            <h3>Sweet Flavor</h3>
+            <p>Deliciously sweet and tender.</p>
+        </div>
+        <div class="feature-item">
+            <img src="img/spicy-roasted.png" alt="Spicy Flavor" class="feature-img">
+            <h3>Spicy Flavor</h3>
+            <p>Flavorful and perfectly spiced.</p>
+        </div>
+        <div class="feature-item">
+            <img src="img/perfect-roasted.png" alt="Roasted to Perfection" class="feature-img">
+            <h3>Classic Roast</h3>
+            <p>A timeless favorite.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="container">
+    <h2>Menu</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="img/spicy-roasted.png" alt="Spicy Roasted Chicken">
+            <h3>Spicy Roasted Chicken</h3>
+            <p class="price" data-price="280">₱280</p>
+            <a href="javascript:void(0);" class="btn order-button" data-name="Spicy Roasted Chicken" data-price="10.99">Order Now</a>
+        </div>
+        <div class="menu-item">
+            <img src="img/sweet-roasted.png" alt="Sweet Glazed Chicken">
+            <h3>Sweet Glazed Chicken</h3>
+            <p class="price" data-price="270">₱270</p>
+            <a href="javascript:void(0);" class="btn order-button" data-name="Sweet Glazed Chicken" data-price="10.99">Order Now</a>
+        </div>
+        <div class="menu-item">
+            <img src="img/perfect-roasted.png" alt="Classic Roasted Chicken">
+            <h3>Classic Roasted Chicken</h3>
+            <p class="price" data-price="230">₱200</p>
+            <a href="javascript:void(0);" class="btn order-button" data-name="Classic Roasted Chicken" data-price="9.99">Order Now</a>
+        </div>
+        <div class="menu-item">
+            <img src="img/liempo.png" alt="Liempo">
+            <h3>Liempo</h3>
+            <p class="price" data-price="250">₱250</p>
+            <a href="javascript:void(0);" class="btn order-button" data-name="Classic Roasted Chicken" data-price="9.99">Order Now</a>
+        </div>
+    </div>
+</section>
+
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2 id="modalTitle">Place Your Order</h2>
+        <form id="orderForm">
+            <h3>Please Select:</h3>
+            <div>
+                <label>
+                    <input type="checkbox" name="specialty" value="sweet" class="specialty-checkbox" data-price="270"> Sweet Flavor
+                </label>
+                <label>
+                    <input type="checkbox" name="specialty" value="spicy" class="specialty-checkbox" data-price="280"> Spicy Flavor
+                </label>
+                <label>
+                    <input type="checkbox" name="specialty" value="classic" class="specialty-checkbox" data-price="230"> Classic Flavor
+                </label>
+                <label>
+                    <input type="checkbox" name="specialty" value="quality" class="specialty-checkbox" data-price="250"> Liempo
+                </label>
+            </div>
+            <h3>Quantities:</h3>
+            <div id="quantityInputs">
+                <div>
+                    <label for="quantity-sweet">Sweet Quantity:</label>
+                    <input type="number" id="quantity-sweet" name="quantity-sweet" min="1" value="1" disabled>
+                </div>
+                <div>
+                    <label for="quantity-spicy">Spicy Quantity:</label>
+                    <input type="number" id="quantity-spicy" name="quantity-spicy" min="1" value="1" disabled>
+                </div>
+                <div>
+                    <label for="quantity-classic">Classic Quantity:</label>
+                    <input type="number" id="quantity-classic" name="quantity-classic" min="1" value="1" disabled>
+                </div>
+                <div>
+                    <label for="quantity-liempo">Liempo:</label>
+                    <input type="number" id="quantity-liempo" name="quantity-liempo" min="1" value="1" disabled>
+                </div>
+            </div>
+            <h3>Total Price: <span id="totalPrice">$0.00</span></h3>
+            <button type="submit" class="btn">Submit Order</button>
+        </form>
+    </div>
+</div>
+
+<!-- About Us Section -->
+<section id="about" class="container">
+    <h2>About Us</h2>
+    
+    <div class="about-content">
+    <div class="about-info">
+        <h3>Our Vision</h3>
+        <p>To be the most loved roasted chicken brand in every Filipino home, delivering high-quality, flavorful, and affordable meals that bring families together while upholding values of excellence, sustainability, and community care.</p>
+        <h3>Our Mission</h3>
+        <p>To bring joy to every meal through fresh, flavorful, and convenient roasted chicken options for families and individuals alike.</p>
+        
+        <h3>Our Story</h3>
+        <p>Chooks ToGo started as a small local shop with a big dream—to make delicious, high-quality roasted chicken available to everyone. Today, we have grown but our dedication to flavor and quality remains the same.</p>
+        
+        <h3>Why Choose Us?</h3>
+        <ul>
+            <li>Locally sourced, high-quality ingredients</li>
+            <li>Unique, mouthwatering flavors</li>
+            <li>Convenient and ready-to-go meals</li>
+        </ul>
+    </div>
+    <div class="about-portrait">
+        <img src="img/poster.jpg" alt="Chooks ToGo Team" class="portrait-img">
+    </div>
+</div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="container">
+    <h2>Feedback</h2>
+    
+    <!-- Form for Adding Comments -->
+    <form id="commentForm">
+        <textarea id="commentInput" placeholder="Type your comment here..." required></textarea>
+        <button type="button" id="submitComment" class="btn">Submit Comment</button>
+    </form>
+
+    <!-- Display User Comments Here -->
+    <div id="commentList">
+        <!-- Example of a default comment -->
+        <div class="comment">
+            <p>"The best roasted chicken I’ve ever had!" - Jane Doe</p>
+            <button class="delete-comment">Delete</button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div>
+        <p>&copy; 2024 Chooks ToGo. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
